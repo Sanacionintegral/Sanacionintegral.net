@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sanación Energética y Lectura de Cartas</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1f1333;
+      color: #f5f5f5;
+      text-align: center;
+    }
+    header {
+      padding: 30px 20px;
+    }
+    img {
+      max-width: 200px;
+      margin-bottom: 20px;
+    }
+    h1 {
+      font-size: 2em;
+      margin: 0;
+    }
+    h2 {
+      margin-top: 10px;
+      font-weight: normal;
+    }
+    .whatsapp-btn {
+      margin: 30px auto;
+      display: inline-block;
+      background-color: #25D366;
+      color: white;
+      padding: 15px 30px;
+      border-radius: 10px;
+      font-size: 18px;
+      text-decoration: none;
+    }
+    .whatsapp-btn:hover {
+      background-color: #1ebe5d;
+    }
+    .info-section {
+      padding: 40px 20px;
+      background-color: #2a1946;
+    }
+    .scroll-link {
+      color: #d7baff;
+      text-decoration: underline;
+      cursor: pointer;
+      font-weight: bold;
+    }
+  </style>
+
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1244263390581129');
+    fbq('track', 'PageView');
+  </script>
+
+</head>
+<body>
+
+  <header>
+    <img src="logotarot.png" alt="Logo Tarot" />
+    <h1>Lectura de Cartas Personalizadas</h1>
+    <h2>Sanación energética y espiritual</h2>
+
+    <a href="https://wa.me/542235931151?text=Quiero%20saber%20mas!!!"
+       onclick="enviarEventoContact()"
+       class="whatsapp-btn">
+       Escribime por WhatsApp
+    </a>
+
+    <div style="margin-top: 20px;">
+      <span class="scroll-link" onclick="document.getElementById('info').scrollIntoView({behavior: 'smooth'})">
+        Más info sobre la técnica
+      </span>
+    </div>
+  </header>
+
+  <section class="info-section" id="info">
+    <h2>✨ Técnica de armonización energética ✨</h2>
+    <p>Elimina bajas vibraciones en forma inmediata 🙌✨<br>
+    Ideal para liberar tu campo energético y recuperar tu bienestar.</p>
+
+    <p><strong>🔘 Neutraliza:</strong><br>
+    Mal de ojo, envidia, magias, espíritu invasor, bajo astral y energías desencarnadas.</p>
+
+    <p><strong>🔘 Restaura tu equilibrio:</strong><br>
+    Alinea chakras, armoniza el palacio de cristal y corta ataduras y cadenas energéticas 🔗</p>
+
+    <p>Una herramienta poderosa para quienes buscan <br>
+    protección, claridad espiritual y paz interior.</p>
+  </section>
+
+  <!-- API Conversion Event -->
+  <script>
+    function enviarEventoContact() {
+      const url = 'https://graph.facebook.com/v18.0/1244263390581129/events';
+      const token = 'EAAKMYNrmVAABPAIVs6Pb0VfbaTbCGKO9SlyWZBJFoofs1iBT1LFcOUHWH9FaS264OsVEiYY2mL17cVN9e3YqY2CD6jRUD1WYMvFlFTTZCNVtcAz1CUCYIZBM2TCKyCPnCby9sLh1vpk9P3U5hZAfnSneBVbPUUK7IN5KyAFbnYqdX3NwqswvLOZB5HiLrThRi9QZDZD';
+
+      const evento = {
+        event_name: 'Contact',
+        event_time: Math.floor(Date.now() / 1000),
+        action_source: 'website',
+        event_source_url: window.location.href,
+        user_data: {}
+      };
+
+      fetch(`${url}?access_token=${token}`, {
+        method: 'POST',
+        body: JSON.stringify({ data: [evento] }),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
