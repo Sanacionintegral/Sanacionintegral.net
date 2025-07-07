@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -76,7 +77,7 @@
     <h2>Sanación energética y espiritual</h2>
 
     <a href="https://wa.me/542235931151?text=Quiero%20saber%20mas!!!"
-       onclick="enviarEventoContact()"
+       onclick="fbq('track', 'Contact');"
        class="whatsapp-btn">
        Escribime por WhatsApp
     </a>
@@ -103,29 +104,6 @@
     protección, claridad espiritual y paz interior.</p>
   </section>
 
-  <!-- API Conversion Event -->
-  <script>
-    function enviarEventoContact() {
-      const url = 'https://graph.facebook.com/v18.0/1244263390581129/events';
-      const token = 'EAAKMYNrmVAABPAIVs6Pb0VfbaTbCGKO9SlyWZBJFoofs1iBT1LFcOUHWH9FaS264OsVEiYY2mL17cVN9e3YqY2CD6jRUD1WYMvFlFTTZCNVtcAz1CUCYIZBM2TCKyCPnCby9sLh1vpk9P3U5hZAfnSneBVbPUUK7IN5KyAFbnYqdX3NwqswvLOZB5HiLrThRi9QZDZD';
-
-      const evento = {
-        event_name: 'Contact',
-        event_time: Math.floor(Date.now() / 1000),
-        action_source: 'website',
-        event_source_url: window.location.href,
-        user_data: {}
-      };
-
-      fetch(`${url}?access_token=${token}`, {
-        method: 'POST',
-        body: JSON.stringify({ data: [evento] }),
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      });
-    }
-  </script>
-
 </body>
 </html>
+
