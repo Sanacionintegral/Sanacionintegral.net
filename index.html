@@ -62,7 +62,7 @@
     t.src=v;s=b.getElementsByTagName(e)[0];
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '1508960240110377');  // <-- NUEVO ID DE PIXEL
+    fbq('init', '1508960240110377');
     fbq('track', 'PageView');
   </script>
 
@@ -75,7 +75,7 @@
     <h2>Sanación energética y espiritual</h2>
 
     <a href="https://wa.me/542235990257?text=Quiero%20saber%20mas!!!"
-       onclick="fbq('track', 'Contact', {value: 100, currency: 'ARS'});"
+       onclick="trackContacto();"
        class="whatsapp-btn">
        Escribime por WhatsApp
     </a>
@@ -102,6 +102,29 @@
     protección, claridad espiritual y paz interior.</p>
   </section>
 
+  <!-- Conversion API (CAPI) desde JS -->
+  <script>
+    function enviarEventoContactCAPI() {
+      fetch("https://graph.facebook.com/v19.0/1508960240110377/events?access_token=EAAQhZBOBQhxcBPOyDPu4K64XxhsH5VIyDMJBBEuuZCE18EE9gtIyj4vHzM4ulBxuPP4lFIn40eehawaQETl8uqS7AjEMZBnHqsHn6wuZAojKkQsNOmT4JrmpngjZAaZAdLBNqWA38gLijXdkwiq26PqtiJHRSMIZCe6c8yKqoAPCyLTA235sLCTXDKmORpEtwZDZD", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          event_name: "Contact",
+          event_time: Math.floor(Date.now() / 1000),
+          action_source: "website",
+          user_data: {
+            client_ip_address: "", // Se completa automáticamente del lado del servidor de Meta
+            client_user_agent: navigator.userAgent
+          }
+        })
+      });
+    }
+
+    function trackContacto() {
+      fbq('track', 'Contact', {value: 100, currency: 'ARS'});
+      enviarEventoContactCAPI();
+    }
+  </script>
+
 </body>
 </html>
-
