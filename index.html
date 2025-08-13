@@ -2,129 +2,182 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Técnica de armonización energética</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Sanación Energética 1:1 a distancia – Péndulo Karnak y lectura de cartas</title>
+  <meta name="description" content="Sesiones personalizadas de sanación energética a distancia con péndulo Karnak y lectura de cartas. Duración 45 minutos. Reserva por WhatsApp.">
+
+  <!-- Open Graph: vista previa al compartir -->
+  <meta property="og:title" content="Sanación energética 1:1 a distancia – Clara | Sanación 11.11">
+  <meta property="og:description" content="Liberá bloqueos, alineá tus chakras y recuperá tu paz interior. Sesiones por WhatsApp (45 min).">
+  <meta property="og:image" content="Portadalandig.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:type" content="website">
+  <!-- Si tenés dominio propio, ponelo aquí ↓ -->
+  <meta property="og:url" content="https://TU-DOMINIO-o-GitHubPages">
+
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #1f1333;
-      color: #f5f5f5;
-      text-align: center;
+    :root{
+      --bg:#1f1333; --card:#2a1946; --soft:#3a2163; --text:#f5f5f5;
+      --muted:#d7baff; --brand:#25D366; --brand-hover:#1ebe5d;
+      --accent:#ffd66e; --success:#7ee081;
     }
-    header {
-      padding: 30px 20px;
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial;
+      background: radial-gradient(1200px 800px at 20% -10%, #3b2a69 0%, #1f1333 40%, #1b0f2e 100%);
+      color:var(--text); line-height:1.45;
     }
-    img {
-      max-width: 200px;
-      margin-bottom: 20px;
+    header{padding:28px 20px 10px; text-align:center}
+    /* Portada hero (usa Portadalandig.png) */
+    .hero{
+      max-width:1080px; margin:0 auto 12px; border-radius:16px; overflow:hidden;
+      border:1px solid rgba(214,186,255,.12); box-shadow:0 12px 40px rgba(0,0,0,.25);
+      aspect-ratio: 1200 / 630; /* asegura proporción OG */
+      background: center/cover no-repeat url('Portadalandig.png');
     }
-    h1 {
-      font-size: 2em;
-      margin: 0;
+    .eyebrow{
+      color:var(--muted); font-weight:600; text-transform:uppercase;
+      font-size:12px; letter-spacing:.18em; margin-top:14px;
     }
-    h2 {
-      margin-top: 10px;
-      font-weight: normal;
+    h1{margin:8px 0 8px; font-size: clamp(26px,3.5vw,40px)}
+    .sub{max-width:820px; margin:8px auto 0; color:#eee; opacity:.9; font-size:clamp(16px,2.2vw,18px)}
+    .hero-cta{margin:18px auto 0; display:flex; gap:12px; justify-content:center; flex-wrap:wrap}
+    .btn{appearance:none; border:0; cursor:pointer; padding:14px 20px; border-radius:12px; font-weight:700; font-size:16px; text-decoration:none; display:inline-flex; align-items:center; gap:10px}
+    .btn--wa{background:var(--brand); color:#073b22}
+    .btn--wa:hover{background:var(--brand-hover)}
+    .btn--ghost{background:transparent; border:1px solid #6e55a7; color:var(--muted)}
+    main{padding:12px 20px 64px}
+    .wrap{max-width:1050px; margin:0 auto}
+    .grid{display:grid; gap:18px}
+    @media(min-width:900px){.grid{grid-template-columns:1.1fr .9fr}}
+    .card{
+      background:linear-gradient(180deg, var(--card), var(--soft));
+      border:1px solid rgba(214,186,255,.12); border-radius:18px; padding:22px 20px;
+      box-shadow:0 12px 40px rgba(0,0,0,.25)
     }
-    .whatsapp-btn {
-      margin: 30px auto;
-      display: inline-block;
-      background-color: #25D366;
-      color: white;
-      padding: 15px 30px;
-      border-radius: 10px;
-      font-size: 18px;
-      text-decoration: none;
-    }
-    .whatsapp-btn:hover {
-      background-color: #1ebe5d;
-    }
-    .info-section {
-      padding: 40px 20px;
-      background-color: #2a1946;
-    }
-    .scroll-link {
-      color: #d7baff;
-      text-decoration: underline;
-      cursor: pointer;
-      font-weight: bold;
-    }
+    h2{margin:0 0 12px; font-size:clamp(20px,2.6vw,28px)}
+    .list{margin:8px 0 0; padding:0; list-style:none}
+    .list li{margin:10px 0; padding-left:28px; position:relative}
+    .list li::before{content:"✨"; position:absolute; left:0; top:0}
+    .kpis{display:flex; flex-wrap:wrap; gap:8px; margin-top:8px}
+    .kpi{flex:1 1 140px; background:rgba(255,214,110,.12); border:1px solid rgba(255,214,110,.25);
+      padding:10px 12px; border-radius:12px; text-align:center}
+    .kpi b{display:block; font-size:18px}
+    .faq details{background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08);
+      border-radius:12px; padding:12px 14px; margin:8px 0}
+    .faq summary{cursor:pointer; font-weight:700}
+    .sticky-wa{position:fixed; right:18px; bottom:18px; z-index:50}
+    footer{padding:24px 20px 60px; text-align:center; color:#cbb8ff; opacity:.8}
   </style>
 
-  <!-- Meta Pixel Code -->
+  <!-- Meta Pixel -->
   <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
     fbq('init', '1508960240110377');
     fbq('track', 'PageView');
+    fbq('track', 'ViewContent', {content_name: 'Landing Sanación 1:1'});
   </script>
-
+  <noscript><img height="1" width="1" style="display:none"
+       src="https://www.facebook.com/tr?id=1508960240110377&ev=PageView&noscript=1"/></noscript>
 </head>
 <body>
 
   <header>
-    <img src="logotarot.png" alt="Logo Tarot" />
-    <h1>Técnica de armonización energética</h1>
-    <h2>Sanación energética y espiritual</h2>
+    <!-- Portada hero con tu imagen OG -->
+    <div class="hero" role="img" aria-label="Sanación 11.11 – Clara"></div>
 
-    <a href="https://wa.me/542235285338?text=Quiero%20saber%20mas!!!"
-       onclick="trackContacto();"
-       class="whatsapp-btn">
-       Escribime por WhatsApp
-    </a>
-
-    <div style="margin-top: 20px;">
-      <span class="scroll-link" onclick="document.getElementById('info').scrollIntoView({behavior: 'smooth'})">
-        Más info sobre la técnica
-      </span>
+    <div class="eyebrow">Sesiones 1:1 a distancia • No es un curso</div>
+    <h1>Sanación energética con <span style="color:var(--accent)">péndulo Karnak</span> + lectura de cartas</h1>
+    <p class="sub">Te acompaño a liberar bloqueos, alinear tus chakras y recuperar tu paz interior. Todo por llamada de WhatsApp, desde donde estés.</p>
+    <div class="hero-cta">
+      <a id="ctaHero" class="btn btn--wa" href="https://wa.me/5492235285338?text=Hola%20Clara%2C%20quiero%20reservar%20mi%20sesión%20de%20sanación%20energética%201%3A1&utm_source=landing&utm_medium=button&utm_campaign=contacto_whatsapp" target="_blank" rel="noopener">
+        💬 Reservar mi sesión por WhatsApp
+      </a>
+      <a class="btn btn--ghost" href="#como-funciona">Cómo funciona</a>
     </div>
   </header>
 
-  <section class="info-section" id="info">
-    <h2>✨ Técnica de armonización energética ✨</h2>
-    <p>Elimina bajas vibraciones en forma inmediata 🙌✨<br>
-    Ideal para liberar tu campo energético y recuperar tu bienestar.</p>
+  <main>
+    <div class="wrap grid">
+      <section class="card">
+        <h2>¿Qué trabajamos en la sesión?</h2>
+        <ul class="list">
+          <li>Alineación de chakras y limpieza del campo áurico.</li>
+          <li>Detección y liberación de bloqueos emocionales y patrones repetidos.</li>
+          <li>Neutralización de energías densas (mal de ojo, envidia, bajo astral).</li>
+          <li>Apertura de caminos y descanso mental.</li>
+          <li>Orientación con lectura de cartas (si lo deseás) para enfocar la sanación.</li>
+        </ul>
 
-    <p><strong>🔘 Neutraliza:</strong><br>
-    Mal de ojo, envidia, magias, espíritu invasor, bajo astral y energías desencarnadas.</p>
+        <div class="kpis">
+          <div class="kpi"><b>45 min</b> Duración aprox.</div>
+          <div class="kpi"><b>$10.000</b> Valor por sesión</div>
+          <div class="kpi"><b>100% online</b> Vía WhatsApp</div>
+        </div>
+      </section>
 
-    <p><strong>🔘 Restaura tu equilibrio:</strong><br>
-    Alinea chakras, armoniza el palacio de cristal y corta ataduras y cadenas energéticas 🔗</p>
+      <section class="card" id="como-funciona">
+        <h2>Cómo funciona (paso a paso)</h2>
+        <ol class="list" style="list-style:decimal;padding-left:20px">
+          <li style="margin:10px 0">Me escribís por WhatsApp y coordinamos día y hora.</li>
+          <li style="margin:10px 0">Si querés, iniciamos con una breve lectura de cartas.</li>
+          <li style="margin:10px 0">Realizo la sanación con péndulo Karnak y te guío en todo momento.</li>
+          <li style="margin:10px 0">Cierro con recomendaciones simples para sostener tu energía.</li>
+        </ol>
+        <div style="margin-top:14px">
+          <a id="ctaFuncionamiento" class="btn btn--wa" href="https://wa.me/5492235285338?text=Hola%20Clara%2C%20quisiera%20coordinar%20mi%20sesión%20de%20sanación%201%3A1&utm_source=landing&utm_medium=link&utm_campaign=como_funciona" target="_blank" rel="noopener">
+            Agendar por WhatsApp
+          </a>
+        </div>
+      </section>
+    </div>
 
-    <p>Una herramienta poderosa para quienes buscan <br>
-    protección, claridad espiritual y paz interior.</p>
-  </section>
+    <section class="wrap card" style="margin-top:18px">
+      <h2>Importante</h2>
+      <p><span style="background:rgba(126,224,129,.18);border:1px solid rgba(126,224,129,.35);padding:6px 10px;border-radius:999px;font-weight:700">No es un curso</span>
+      Es una <strong>sesión 1:1 personalizada</strong>, enfocada en tu caso y tu energía. Se realiza a distancia por llamada de WhatsApp.</p>
+    </section>
 
-  <!-- Conversion API (CAPI) desde JS -->
+    <section class="wrap card faq" style="margin-top:18px">
+      <h2>Preguntas frecuentes</h2>
+      <details><summary>¿Necesito estar presente físicamente?</summary><p>No. Trabajamos a distancia, en tiempo real, por llamada de WhatsApp.</p></details>
+      <details><summary>¿Contraindicaciones?</summary><p>No tiene contraindicaciones médicas. Es un acompañamiento energético/emocional y podés continuar con tus tratamientos.</p></details>
+      <details><summary>¿Cuántas sesiones?</summary><p>Cambia según el caso. Muchas personas sienten alivio desde la primera. Luego, si querés, planificamos 2–4 encuentros.</p></details>
+      <details><summary>Formas de pago</summary><p>Transferencia/depósito. Consultame por otras opciones al reservar.</p></details>
+    </section>
+  </main>
+
+  <div class="sticky-wa">
+    <a id="ctaSticky" class="btn btn--wa" href="https://wa.me/5492235285338?text=Hola%20Clara%2C%20quiero%20reservar%20una%20sesión%20de%20sanación&utm_source=landing&utm_medium=fab&utm_campaign=cta_sticky" target="_blank" rel="noopener">
+      💬 Reservar por WhatsApp
+    </a>
+  </div>
+
+  <footer style="text-align:center;color:#cbb8ff;opacity:.8">
+    © Sanación 11.11 — Sesiones de sanación energética a distancia
+  </footer>
+
   <script>
-    function enviarEventoContactCAPI() {
-      fetch("https://graph.facebook.com/v19.0/1508960240110377/events?access_token=EAAQhZBOBQhxcBPOyDPu4K64XxhsH5VIyDMJBBEuuZCE18EE9gtIyj4vHzM4ulBxuPP4lFIn40eehawaQETl8uqS7AjEMZBnHqsHn6wuZAojKkQsNOmT4JrmpngjZAaZAdLBNqWA38gLijXdkwiq26PqtiJHRSMIZCe6c8yKqoAPCyLTA235sLCTXDKmORpEtwZDZD", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          event_name: "Contact",
-          event_time: Math.floor(Date.now() / 1000),
-          action_source: "website",
-          user_data: {
-            client_ip_address: "", // Se completa automáticamente del lado del servidor de Meta
-            client_user_agent: navigator.userAgent
-          }
-        })
-      });
+    // Track de clics en CTAs
+    function trackContact(label){
+      if (window.fbq) {
+        fbq('track', 'Contact', {content_name: label});
+        fbq('trackCustom','CTA_Click', {label});
+      }
     }
-
-    function trackContacto() {
-      fbq('track', 'Contact', {value: 100, currency: 'ARS'});
-      enviarEventoContactCAPI();
-    }
+    document.getElementById('ctaHero').addEventListener('click', ()=>trackContact('CTA Hero'));
+    document.getElementById('ctaFuncionamiento').addEventListener('click', ()=>trackContact('CTA Funcionamiento'));
+    document.getElementById('ctaSticky').addEventListener('click', ()=>trackContact('CTA Sticky'));
   </script>
-
 </body>
 </html>
