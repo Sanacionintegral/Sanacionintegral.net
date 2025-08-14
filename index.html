@@ -234,19 +234,21 @@
         value: valueARS,
         currency: 'ARS'
       });
-      fbq('trackCustom','CTA_Click', {label, value: valueARS, currency: 'ARS'});
+      fbq('trackCustom','CTA_Click', { label, value: valueARS, currency: 'ARS' });
     }
   }
 
-  // CTA Hero = Sesión holística
+  // Montos:
+  // - Sesión holística (CTA Hero): 12.000 ARS
+  // - Tarot / Lectura de cartas (CTA Funcionamiento): 8.000 ARS
+  // - Péndulo Karnak (CTA Sticky): 9.000 ARS
+
   document.getElementById('ctaHero')
     .addEventListener('click', ()=>trackContact('CTA Hero – Sesión Holística', 12000));
 
-  // CTA Funcionamiento = Tarot / Lectura de cartas
   document.getElementById('ctaFuncionamiento')
     .addEventListener('click', ()=>trackContact('CTA Funcionamiento – Lectura de cartas', 8000));
 
-  // CTA Sticky = Péndulo Karnak
   document.getElementById('ctaSticky')
     .addEventListener('click', ()=>trackContact('CTA Sticky – Péndulo Karnak', 9000));
 </script>
