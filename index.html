@@ -227,16 +227,29 @@
   </footer>
 
   <script>
-    function trackContact(label){
-      if (window.fbq) {
-        fbq('track', 'Contact', {content_name: label});
-        fbq('trackCustom','CTA_Click', {label});
-      }
+  function trackContact(label, valueARS){
+    if (window.fbq) {
+      fbq('track', 'Contact', {
+        content_name: label,
+        value: valueARS,
+        currency: 'ARS'
+      });
+      fbq('trackCustom','CTA_Click', {label, value: valueARS, currency: 'ARS'});
     }
-    document.getElementById('ctaHero').addEventListener('click', ()=>trackContact('CTA Hero'));
-    document.getElementById('ctaFuncionamiento').addEventListener('click', ()=>trackContact('CTA Funcionamiento'));
-    document.getElementById('ctaSticky').addEventListener('click', ()=>trackContact('CTA Sticky'));
-  </script>
+  }
+
+  // CTA Hero = Sesión holística
+  document.getElementById('ctaHero')
+    .addEventListener('click', ()=>trackContact('CTA Hero – Sesión Holística', 12000));
+
+  // CTA Funcionamiento = Tarot / Lectura de cartas
+  document.getElementById('ctaFuncionamiento')
+    .addEventListener('click', ()=>trackContact('CTA Funcionamiento – Lectura de cartas', 8000));
+
+  // CTA Sticky = Péndulo Karnak
+  document.getElementById('ctaSticky')
+    .addEventListener('click', ()=>trackContact('CTA Sticky – Péndulo Karnak', 9000));
+</script>
 
 </body>
 </html>
