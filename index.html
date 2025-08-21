@@ -23,106 +23,52 @@
 
   <style>
     :root{
-      --bg:#1f1333;
-      --card:#2a1946;
-      --soft:#3a2163;
-      --text:#f5f5f5;
-      --muted:#d7baff;
-      --brand:#25D366;
-      --brand-hover:#1ebe5d;
-      --accent:#ffd66e;
-      --success:#7ee081;
+      --bg:#1f1333; --card:#2a1946; --soft:#3a2163; --text:#f5f5f5;
+      --muted:#d7baff; --brand:#25D366; --brand-hover:#1ebe5d; --accent:#ffd66e; --success:#7ee081;
     }
     *{box-sizing:border-box}
     body{
-      margin:0;
-      font-family:system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+      margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
       background: radial-gradient(1200px 800px at 20% -10%, #3b2a69 0%, #1f1333 40%, #1b0f2e 100%);
-      color:var(--text);
-      line-height:1.45;
+      color:var(--text); line-height:1.45;
     }
-    header{
-      padding:48px 20px 24px;
-      text-align:center;
-    }
-    header img.logo{
-      width:120px;height:120px;object-fit:contain;opacity:.9;margin-bottom:8px;filter: drop-shadow(0 4px 14px rgba(0,0,0,.35));
-    }
-    h1{
-      margin:8px 0 8px;
-      font-size: clamp(26px, 3.5vw, 40px);
-      letter-spacing:.3px;
-    }
-    .eyebrow{
-      color:var(--muted);
-      font-weight:600;
-      text-transform:uppercase;
-      font-size:12px;
-      letter-spacing:.18em;
-    }
-    .sub{
-      max-width:820px;margin:8px auto 0;
-      color:#eee;opacity:.9;font-size:clamp(16px,2.2vw,18px)
-    }
-    .hero-cta{
-      margin:24px auto 0;
-      display:flex;gap:12px;justify-content:center;flex-wrap:wrap
-    }
-    .btn{
-      appearance:none;border:0;cursor:pointer;
-      padding:14px 20px;border-radius:12px;
-      font-weight:700;font-size:16px;text-decoration:none;display:inline-flex;align-items:center;gap:10px
-    }
-    .btn--wa{background:var(--brand);color:#073b22}
-    .btn--wa:hover{background:var(--brand-hover)}
-    .btn--ghost{background:transparent;border:1px solid #6e55a7;color:var(--muted)}
-    main{padding:12px 20px 64px}
-    .wrap{max-width:1050px;margin:0 auto}
-    .grid{display:grid;gap:18px}
-    @media(min-width:900px){.grid{grid-template-columns:1.1fr .9fr}}
+    header{ padding:48px 20px 24px; text-align:center; }
+    header img.logo{ width:120px; height:120px; object-fit:contain; opacity:.9; margin-bottom:8px; filter: drop-shadow(0 4px 14px rgba(0,0,0,.35)); }
+    h1{ margin:8px 0 8px; font-size: clamp(26px, 3.5vw, 40px); letter-spacing:.3px; }
+    .eyebrow{ color:var(--muted); font-weight:600; text-transform:uppercase; font-size:12px; letter-spacing:.18em; }
+    .sub{ max-width:820px; margin:8px auto 0; color:#eee; opacity:.9; font-size:clamp(16px,2.2vw,18px) }
+    .hero-cta{ margin:24px auto 0; display:flex; gap:12px; justify-content:center; flex-wrap:wrap }
+    .btn{ appearance:none; border:0; cursor:pointer; padding:14px 20px; border-radius:12px; font-weight:700; font-size:16px; text-decoration:none; display:inline-flex; align-items:center; gap:10px }
+    .btn--wa{ background:var(--brand); color:#073b22 }
+    .btn--wa:hover{ background:var(--brand-hover) }
+    .btn--ghost{ background:transparent; border:1px solid #6e55a7; color:var(--muted) }
+    main{ padding:12px 20px 64px }
+    .wrap{ max-width:1050px; margin:0 auto }
+    .grid{ display:grid; gap:18px }
+    @media(min-width:900px){ .grid{ grid-template-columns:1.1fr .9fr } }
     .card{
       background:linear-gradient(180deg, var(--card), var(--soft));
       border:1px solid rgba(214,186,255,.12);
-      border-radius:18px;padding:22px 20px;
-      box-shadow:0 12px 40px rgba(0,0,0,.25)
+      border-radius:18px; padding:22px 20px; box-shadow:0 12px 40px rgba(0,0,0,.25)
     }
-    h2{margin:0 0 12px;font-size:clamp(20px,2.6vw,28px)}
-    p{margin:10px 0}
-    .list{margin:8px 0 0;padding:0 0 0 0;list-style:none}
-    .list li{
-      margin:10px 0;padding-left:28px;position:relative
-    }
-    .list li::before{
-      content:"✨";position:absolute;left:0;top:0;filter: drop-shadow(0 2px 6px rgba(0,0,0,.4))
-    }
-    .badge{
-      display:inline-flex;align-items:center;gap:8px;
-      background:rgba(126,224,129,.18);
-      color:var(--success);border:1px solid rgba(126,224,129,.35);
-      padding:6px 10px;border-radius:999px;font-size:13px;font-weight:700
-    }
-    .kpis{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
-    .kpi{
-      flex:1 1 140px;background:rgba(255,214,110,.12);border:1px solid rgba(255,214,110,.25);
-      padding:10px 12px;border-radius:12px;text-align:center
-    }
-    .kpi b{display:block;font-size:18px}
-    .faq details{
-      background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);
-      border-radius:12px;padding:12px 14px;margin:8px 0
-    }
-    .faq summary{cursor:pointer;font-weight:700}
-    .sticky-wa{
-      position:fixed;right:18px;bottom:18px;z-index:50
-    }
-    .note{
-      margin-top:10px;color:#eae2ff;opacity:.85;font-size:14px
-    }
-    footer{padding:24px 20px 60px;text-align:center;color:#cbb8ff;opacity:.8}
-    .muted{opacity:.75}
+    h2{ margin:0 0 12px; font-size:clamp(20px,2.6vw,28px) }
+    p{ margin:10px 0 }
+    .list{ margin:8px 0 0; padding:0; list-style:none }
+    .list li{ margin:10px 0; padding-left:28px; position:relative }
+    .list li::before{ content:"✨"; position:absolute; left:0; top:0; filter: drop-shadow(0 2px 6px rgba(0,0,0,.4)) }
+    .badge{ display:inline-flex; align-items:center; gap:8px; background:rgba(126,224,129,.18); color:var(--success); border:1px solid rgba(126,224,129,.35); padding:6px 10px; border-radius:999px; font-size:13px; font-weight:700 }
+    .kpis{ display:flex; flex-wrap:wrap; gap:8px; margin-top:8px }
+    .kpi{ flex:1 1 140px; background:rgba(255,214,110,.12); border:1px solid rgba(255,214,110,.25); padding:10px 12px; border-radius:12px; text-align:center }
+    .kpi b{ display:block; font-size:18px }
+    .faq details{ background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08); border-radius:12px; padding:12px 14px; margin:8px 0 }
+    .faq summary{ cursor:pointer; font-weight:700 }
+    .sticky-wa{ position:fixed; right:18px; bottom:18px; z-index:50 }
+    .note{ margin-top:10px; color:#eae2ff; opacity:.85; font-size:14px }
+    footer{ padding:24px 20px 60px; text-align:center; color:#cbb8ff; opacity:.8 }
+    .muted{ opacity:.75 }
   </style>
 
-  <!-- Meta Pixel -->
+  <!-- Meta Pixel (solo una vez, en el <head>) -->
   <script>
     !function(f,b,e,v,n,t,s){
       if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -230,32 +176,46 @@
     © Sanación 11.11 — Sesiones de sanación energética a distancia
   </footer>
 
+  <!-- Tracking CTAs: Contact (sin valor) + Lead (con valor) -->
   <script>
-  function trackContact(label, valueARS){
-    if (window.fbq) {
-      fbq('track', 'Contact', {
-        content_name: label,
-        value: valueARS,
-        currency: 'ARS'
-      });
-      fbq('trackCustom','CTA_Click', { label, value: valueARS, currency: 'ARS' });
+    // Contact SIN valor + evento custom
+    function trackContact(label){
+      if (window.fbq) {
+        fbq('track','Contact',{ content_name: label });
+        fbq('trackCustom','CTA_Click',{ label });
+      }
     }
-  }
 
-  // Montos:
-  // - Sesión holística (CTA Hero): 12.000 ARS
-  // - Tarot / Lectura de cartas (CTA Funcionamiento): 8.000 ARS
-  // - Péndulo Karnak (CTA Sticky): 9.000 ARS
+    // Lead CON valor coherente
+    function trackLead(label, valueARS){
+      if (window.fbq) {
+        fbq('track','Lead',{ content_name: label, value: valueARS, currency:'ARS' });
+      }
+    }
 
-  document.getElementById('ctaHero')
-    .addEventListener('click', ()=>trackContact('CTA Hero – Sesión Holística', 12000));
+    // Adjuntar listeners cuando el DOM está listo
+    document.addEventListener('DOMContentLoaded', function(){
+      var hero = document.getElementById('ctaHero');
+      var func = document.getElementById('ctaFuncionamiento');
+      var sticky = document.getElementById('ctaSticky');
 
-  document.getElementById('ctaFuncionamiento')
-    .addEventListener('click', ()=>trackContact('CTA Funcionamiento – Lectura de cartas', 8000));
+      if (hero) hero.addEventListener('click', function(){
+        trackContact('CTA Hero – Sesión Holística');
+        trackLead('CTA Hero – Sesión Holística', 18000);
+      });
 
-  document.getElementById('ctaSticky')
-    .addEventListener('click', ()=>trackContact('CTA Sticky – Péndulo Karnak', 9000));
-</script>
+      if (func) func.addEventListener('click', function(){
+        trackContact('CTA Funcionamiento – Lectura de cartas');
+        trackLead('CTA Funcionamiento – Lectura de cartas', 12000);
+      });
+
+      if (sticky) sticky.addEventListener('click', function(){
+        trackContact('CTA Sticky – Péndulo Karnak');
+        trackLead('CTA Sticky – Péndulo Karnak', 12000);
+      });
+    });
+  </script>
 
 </body>
 </html>
+
